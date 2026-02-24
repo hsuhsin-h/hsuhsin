@@ -1,0 +1,55 @@
+import { useState } from 'react';
+import './App.css';
+import Home from './components/Home/Home';
+import K8s from './components/K8s/K8s';
+
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('home');
+  const [isOpen, setIsOpen] = useState(false); // 👈 控制選單開關的大腦
+
+  // 切換選單的動作
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  // 點擊選項後自動關閉選單並換頁
+  const changePage = (page) => {
+    setCurrentPage(page);
+    setIsOpen(false); 
+  };
+
+  return (
+    <div className="app-container">
+      {/* --- 三條槓按鈕 --- */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+      </div>
+
+      {/* --- 側邊拉出選單 --- */}
+      <aside className={`sidebar ${isOpen ? 'active' : ''}`}>
+        <div className="logo">Hsuhsin Lab</div>
+        <ul className="nav-links">
+          <li onClick={() => changePage('home')}>首頁</li>
+          <li onClick={() => changePage('projects')}>技術專案</li>
+          <li onClick={() => changePage('k8s')}>k8s</li>
+          <li onClick={() => changePage('Beyblade')}>Beyblade</li>
+          <li onClick={() => changePage('about')}>關於我</li>
+        </ul>
+      </aside>
+
+      {/* --- 遮罩層 (選單打開時，點擊空白處可關閉) --- */}
+      {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
+
+      {/* --- 主內容區 --- */}
+      <main className="content">
+        {currentPage === 'home' && <Home />}
+        {currentPage === 'projects' && <div>專案頁（開發中...）</div>}
+        {currentPage === 'k8s' && <K8s/>}
+        {currentPage === 'Beyblade' && <div>Beyblade（開發中...）</div>}
+        {currentPage === 'about' && <div>關於我（開發中...）</div>}
+      </main>
+    </div>
+  );
+};
+
+export default App;
