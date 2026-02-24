@@ -60,7 +60,7 @@ const Home = () => {
                 <p>4.容器化：Docker熟練</p>
                 <p>5.編排：Kubernetes (K8s) 叢集部署與管理</p>
                 <p>6.網路：深入理解 TCP/IP、VPC 子網劃分與路徑解析</p>
-                <p>自動化：Terraform 基礎設施即代碼 (IaC) 或 Python 自動化腳本開發</p>
+                <p>7.自動化：Terraform 基礎設施即代碼 (IaC) 或 Python 自動化腳本開發</p>
 
             </div>
             
