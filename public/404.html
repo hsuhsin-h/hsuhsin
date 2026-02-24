@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    // 這個腳本會把目前的 URL 路徑轉換成參數，然後跳轉回 index.html
+    var segmentCount = 1; // 如果你的網址是 hsuhsin-h.github.io/my-react-app/，這裡設 1
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+      l.pathname.split('/').slice(1 + segmentCount).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>
