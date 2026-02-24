@@ -86,3 +86,6 @@
       padding: 20px;
       text-align: center; /* 讓文字也置中 */
   }
+
+    .content-section p:nth-child(2) { font-size: 50px; } /* 紅 - 臺北大學 */
+    

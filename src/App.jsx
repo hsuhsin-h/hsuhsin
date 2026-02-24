@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home';
 import K8s from './components/K8s/K8s';
+import Beyblade from './components/Beyblade/Beyblade';
 
 
 const App = () => {
@@ -30,10 +31,10 @@ const App = () => {
 
       {/* --- 側邊拉出選單 --- */}
       <aside className={`sidebar ${isOpen ? 'active' : ''}`}>
-        <div className="logo">Hsuhsin Lab</div>
+        <div className="logo">要練才會強</div>
         <ul className="nav-links">
           <li onClick={() => changePage('home')}>首頁</li>
-          <li onClick={() => changePage('projects')}>技術專案</li>
+          <li onClick={() => changePage('AWS')}>AWS</li>
           <li onClick={() => changePage('k8s')}>k8s</li>
           <li onClick={() => changePage('Beyblade')}>Beyblade</li>
           <li onClick={() => changePage('about')}>關於我</li>
@@ -49,8 +50,8 @@ const App = () => {
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/k8s" element={<K8s />} />
-          <Route path="/projects" element={<div>專案頁（開發中...）</div>} />
-          <Route path="/beyblade" element={<div>Beyblade（開發中...）</div>} />
+          <Route path="/AWS" element={<div>專案頁（開發中...）</div>} />
+          <Route path="/beyblade" element={<Beyblade />} />
           <Route path="/about" element={<div>關於我（開發中...）</div>} />
           {/* 萬一網址亂打，自動導向首頁 */}
           <Route path="*" element={<Home />} />

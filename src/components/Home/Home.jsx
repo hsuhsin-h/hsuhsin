@@ -15,7 +15,7 @@ const Home = () => {
                     alt="My Avatar" 
                     className="avatar" 
                 />
-                <h1 className="profile-title">hsuhsin</h1>
+                <h1 className="profile-title">仕欣徐練功房</h1>
                 <div className="social-links">
                     <a href="https://github.com/hsuhsin-h" target="_blank" rel="noopener noreferrer">
                         <button className = "connect">

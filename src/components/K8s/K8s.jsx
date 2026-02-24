@@ -17,4 +17,4 @@ const K8s = () => {
   );
 };
 
-export default K8s; // 👈 這行最重要，沒寫它 App.jsx 就讀不到！
+export default K8s; 

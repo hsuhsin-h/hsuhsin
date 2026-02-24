@@ -36,6 +36,11 @@
   transform: translateX(0); /* 激活時滑入 */
 }
 
+.logo{
+  font-size: 24px;
+  color :aqua
+}
+
 .nav-links {
   list-style: none;
   padding: 0;
@@ -43,7 +48,7 @@
 
 .nav-links li {
   padding: 15px 0;
-  color: white;
+  color: rgb(254, 255, 255);
   cursor: pointer;
   font-size: 1.2rem;
   border-bottom: 1px solid #333;
