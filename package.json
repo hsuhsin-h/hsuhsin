@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hsuhsin-h.github.io/my-react-app/", 
+  "homepage": "https://hsuhsin-h.github.io/hsuhsin/", 
   "scripts": {
     "dev": "vite",
     "build": "vite build",
