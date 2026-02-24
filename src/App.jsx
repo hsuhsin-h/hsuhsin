@@ -47,7 +47,7 @@ const App = () => {
       <main className="content">
         {/* 4. 把原本的 {currentPage === ...} 全部換成 Routes */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/k8s" element={<K8s />} />
           <Route path="/projects" element={<div>專案頁（開發中...）</div>} />
           <Route path="/beyblade" element={<div>Beyblade（開發中...）</div>} />
