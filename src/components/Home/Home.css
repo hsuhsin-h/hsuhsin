@@ -82,10 +82,15 @@
     }
   
   /* 下方內容區塊 */
-  .content-section {
+  .goals-container {
       padding: 20px;
       text-align: center; /* 讓文字也置中 */
-  }
+    }
+
+  .goal-text.is-completed {
+    color: #22c55e; /* 漂亮的綠色 (Tailwind Green 500) */
+    font-weight: bold;
+    }
 
     .content-section p:nth-child(2) { font-size: 50px; } /* 紅 - 臺北大學 */
     
